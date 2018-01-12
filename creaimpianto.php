@@ -1,7 +1,7 @@
 <?php
  
-$host='localhost'; // Hostname
-$username='setlist'; // Mysql username
+$host="localhost"; // Hostname
+$username="setlist"; // Mysql username
 $password=""; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_nam="impianti"; // Nome della Tabella
