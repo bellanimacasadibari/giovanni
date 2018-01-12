@@ -18,8 +18,8 @@ $username="setlist"; // Mysql username
 $password="bustopabte25"; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="sensori"; // Nome della Tabella
-$connection = mysql_connect("$host", "$username", "$password")or die("cannot connect");
-$db =mysql_select_db("$db_name")or die("cannot select DB"); 
+$connection = mysql_connect("$host", "$username", "$password");
+$db =mysql_select_db("$db_name"); 
 session_start();
 $user_check = $_SESSION['cerca'];
 $ses_sql = mysql_query ("SELECT * FROM $tbl_name WHERE codsensore ='$user_check'" , $connection);
@@ -46,8 +46,8 @@ $username="setlist"; // Mysql username
 $password=""; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="rilevazioni"; // Nome della Tabella
-$connection = mysql_connect("$host", "$username", "$password")or die("cannot connect");
-$db =mysql_select_db("$db_name")or die("cannot select DB"); 
+$connection = mysql_connect("$host", "$username", "$password");
+$db =mysql_select_db("$db_name"); 
 session_start();
 $user_check = $_SESSION['cerca'];
 $ses_sql = mysql_query ("SELECT * FROM $tbl_name WHERE codsensore ='$user_check'" , $connection);
