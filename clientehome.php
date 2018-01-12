@@ -46,11 +46,15 @@ $ses_sql1 = mysql_query ("SELECT * FROM $tbl_name1 WHERE clienteproprietario ='$
 while($array = mysql_fetch_array($ses_sql1))
 {
 //funzione da ciclare esempio
-print ("Codice sensore n." . "$array[codsensore], ");
-print ("$array[marca],  ");
-print ("$array[tipo], ");
-print ("Impianto n." . "$array[impianto]  ". "<br>");
+ $str = <<<HTML
+ ("Codice sensore n." . "$array[codsensore], ")
+ ("$array[marca],  ")
+("$array[tipo], ")
+("Impianto n." . "$array[impianto]  ". "<br>")
 }  
+HTML;
+ 
+   echo $str;
 
 ?>
 </i>
