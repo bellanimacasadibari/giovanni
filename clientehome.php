@@ -26,12 +26,16 @@ $user_check = $_SESSION['login'];
 $ses_sql = mysql_query ("SELECT * FROM $tbl_name WHERE username ='$user_check'" , $connection);
 $row = mysql_fetch_assoc($ses_sql);
 $username = htmlspecialchars(mysql_ses_sql($row['username']));
-echo '<div class="header"> Username: ' .$username. '</div>';
-echo "Cognome: ". $row['Cognome']. "<br>";
-echo "Nome: ". $row['Nome']. "<br>";
-echo "Indirizzo: ". $row['Indirizzo']. "<br>";
-echo "Telefono: ". $row['NumeroTel']. "<br>";
-echo "Email: ". $row['email']. "<br>". "<br>". "<br>". "<br>";
+$str = <<<HTML
+'<div class="header"> Username: ' .$username. '</div>';
+ "Cognome: ". $row['Cognome']. "<br>";
+ "Nome: ". $row['Nome']. "<br>";
+ "Indirizzo: ". $row['Indirizzo']. "<br>";
+ "Telefono: ". $row['NumeroTel']. "<br>";
+"Email: ". $row['email']. "<br>". "<br>". "<br>". "<br>";
+HTML;
+ 
+   echo $str;
 ?>
 </i>
 ELENCO SENSORI POSSEDUTI:
@@ -74,4 +78,4 @@ print ("$array1[indirizzo]" . "<br>");}
 </body>
 </div>
 </body>
-</html>
+</html>
