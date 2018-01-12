@@ -4,8 +4,8 @@ $username="setlist"; // Mysql username
 $password=""; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="members"; // Nome della Tabella
-$connection = mysqli_connect("$host", "$username",  getPassword())or die("cannot connect");
-$db =mysql_select_db("$db_name")or die("cannot select DB"); 
+$connection = mysqli_connect("$host", "$username",  getPassword());
+$db =mysql_select_db("$db_name"); 
 session_start();
 $user_check = $SESSION['login'];
 $ses_sql = mysqli_query ("SELECT * FROM $tbl_name WHERE username =$user_check" , $connection);
