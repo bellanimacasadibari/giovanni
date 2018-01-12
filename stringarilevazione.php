@@ -18,7 +18,7 @@ $username="setlist"; // Mysql username
 $password="bustopabte25"; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="sensori"; // Nome della Tabella
-$connection = mysql_connect("$host", "$username", "$password");
+$connection = mysql_pconnect("$host", "$username", "$password");
 $db =mysql_select_db("$db_name"); 
 session_start();
 $user_check = $_SESSION['cerca'];
@@ -46,7 +46,7 @@ $username="setlist"; // Mysql username
 $password=""; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="rilevazioni"; // Nome della Tabella
-$connection = mysql_connect("$host", "$username", "$password");
+$connection = mysql_pconnect("$host", "$username", "$password");
 $db =mysql_select_db("$db_name"); 
 session_start();
 $user_check = $_SESSION['cerca'];
