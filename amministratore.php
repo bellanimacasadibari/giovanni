@@ -1,10 +1,10 @@
 <?php
 $host="localhost"; // Hostname
 $username="setlist"; // Mysql username
-$password="bustopabte25"; // Mysql password
+$password=""; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="members"; // Nome della Tabella
-$connection = mysqli_connect("$host", "$username", "$password")or die("cannot connect");
+$connection = mysqli_connect("$host", "$username",  getPassword())or die("cannot connect");
 $db =mysql_select_db("$db_name")or die("cannot select DB"); 
 session_start();
 $user_check = $SESSION['login'];
