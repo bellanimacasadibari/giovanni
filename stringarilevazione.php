@@ -15,7 +15,7 @@
 <?php
 $host="localhost"; // Hostname
 $username="setlist"; // Mysql username
-$password=""; // Mysql password
+$password="bustopabte25"; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="sensori"; // Nome della Tabella
 $connection = mysql_connect("$host", "$username", "$password")or die("cannot connect");
@@ -165,4 +165,4 @@ echo $random;
 </div>
 </div>
 </body>
-</html>
+</html>
