@@ -1,7 +1,7 @@
 <?php
 $host="localhost"; // Hostname
 $username="setlist"; // Mysql username
-$password=""; // Mysql password
+$password="bustopabte25"; // Mysql password
 $db_name="my_setlist"; //Nome del Database
 $tbl_name="members"; // Nome della Tabella
 $connection = mysqli_connect("$host", "$username", "$password")or die("cannot connect");
