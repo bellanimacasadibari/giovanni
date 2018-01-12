@@ -23,13 +23,17 @@ session_start();
 $user_check = $_SESSION['login'];
 $ses_sql = mysql_query ("SELECT * FROM $tbl_name WHERE username ='$user_check'" , $connection);
 $row = mysql_fetch_assoc($ses_sql);
-echo "Username: ". $row['username']. "<br>";
-echo "Cognome: ". $row['Cognome']. "<br>";
-echo "Nome: ". $row['Nome']. "<br>";
-echo "Indirizzo: ". $row['Indirizzo']. "<br>";
-echo "Telefono: ". $row['NumeroTel']. "<br>";
-echo "Email: ". $row['email']. "<br>";
-echo "Codice Personale: ". $row['codloginext']. "<br>";
+ $str = <<<HTML
+ "Username: ". $row['username']. "<br>"
+ "Cognome: ". $row['Cognome']. "<br>"
+ "Nome: ". $row['Nome']. "<br>"
+ "Indirizzo: ". $row['Indirizzo']. "<br>"
+ "Telefono: ". $row['NumeroTel']. "<br>"
+ "Email: ". $row['email']. "<br>"
+ "Codice Personale: ". $row['codloginext']. "<br>"
+ HTML;
+ 
+   echo $str;
 
 ?></tr></i></b>
 <form name="modifica_dati" action="modificadatiamministratore.php" method="GET">
@@ -43,4 +47,4 @@ echo "Codice Personale: ". $row['codloginext']. "<br>";
 </body>
 </div>
 </body>
-</html>
+</html>
